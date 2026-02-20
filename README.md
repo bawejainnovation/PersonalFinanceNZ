@@ -41,11 +41,11 @@ It caches transactions into a local PostgreSQL database, supports rich filtering
 
 These screenshots were generated from isolated demo seed data only (no personal data).
 
-![Transactions](/Users/mohitbaweja/Documents/FinancialInsightsApp/docs/screenshots/transactions.png)
-![Accounts](/Users/mohitbaweja/Documents/FinancialInsightsApp/docs/screenshots/accounts.png)
-![Analytics](/Users/mohitbaweja/Documents/FinancialInsightsApp/docs/screenshots/analytics.png)
-![Contacts](/Users/mohitbaweja/Documents/FinancialInsightsApp/docs/screenshots/contacts.png)
-![Categories](/Users/mohitbaweja/Documents/FinancialInsightsApp/docs/screenshots/categories.png)
+![Transactions](docs/screenshots/transactions.png)
+![Accounts](docs/screenshots/accounts.png)
+![Analytics](docs/screenshots/analytics.png)
+![Contacts](docs/screenshots/contacts.png)
+![Categories](docs/screenshots/categories.png)
 
 ## Tech stack
 
