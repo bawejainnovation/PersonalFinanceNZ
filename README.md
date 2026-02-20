@@ -182,3 +182,50 @@ It is not licensed for commercial, hosted/SaaS, or redistribution use without ex
 ## Attribution
 
 - Bank logo attribution: `docs/BANK_LOGO_ATTRIBUTION.md`
+
+## Security and Compliance Gaps (Engineer Notes)
+
+This project is intentionally designed for local/personal use on your own isolated and secure machine.  
+It is not intended for internet-facing or multi-user deployment in its current form.  
+Treat all cached financial data, exports, logs, and backups as sensitive local assets.
+
+### Risk summary by domain
+- Authentication/authorization:
+  - API endpoints are not protected by user identity or roles.
+  - Export (`/api/transactions/export/csv`) and privacy endpoints (`/api/privacy/*`) are high-risk without access control.
+- Privacy/GDPR:
+  - Export/purge behavior is broad and not user-scoped.
+  - No auditable consent/access trail for data subject actions.
+  - No formal retention/deletion policy enforcement in runtime.
+- Logging/observability:
+  - Error logs can include upstream payloads with potentially sensitive transaction fields.
+  - Structured telemetry exists, but privacy-safe logging standards and alerting policy are not fully defined.
+- Transport/encryption:
+  - HTTPS redirect/HSTS/security-header middleware is not fully enforced in app defaults.
+  - Local DB-at-rest encryption strategy is not implemented by default (depends on host volume/disk settings).
+- Abuse protection:
+  - API rate limiting and request abuse controls are not enabled by default.
+- Secret management:
+  - Weak defaults are possible if local config patterns are copied into shared environments.
+  - Token lifecycle controls (rotation/expiry monitoring) are manual.
+
+### Local-only operating model (recommended)
+- Use this app only on a personal, trusted machine you control.
+- Keep runtime scope local (`localhost`) and avoid exposing ports to other devices/networks.
+- Use full-disk encryption and OS account protections on the host machine.
+- Store Akahu tokens only in ignored local config (`appsettings.Local.json`) or environment variables.
+- Do not commit secrets, CSV exports, DB dumps, or metadata backups.
+- Rotate Akahu tokens immediately if exposure is suspected.
+- Sanitize logs before sharing issues/bug reports externally.
+
+### If you move beyond local-only use
+- The hardening items below become mandatory.
+
+### Hardening checklist before shared/staging/prod use
+- Enforce authentication and authorization on all sensitive endpoints.
+- Add role/scope checks for export, purge, and sync operations.
+- Enforce HTTPS, HSTS, and baseline security headers.
+- Add API rate limiting, payload limits, and abuse controls.
+- Redact/mask sensitive fields in logs and define retention windows.
+- Implement user-scoped GDPR workflows with auditable actions.
+- Define encryption-at-rest and key management approach for database and backups.
