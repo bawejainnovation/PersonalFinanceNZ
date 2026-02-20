@@ -41,11 +41,11 @@ It caches transactions into a local PostgreSQL database, supports rich filtering
 
 These screenshots were generated from isolated demo seed data only (no personal data).
 
-![Transactions](docs/screenshots/transactions.png)
-![Accounts](docs/screenshots/accounts.png)
-![Analytics](docs/screenshots/analytics.png)
-![Contacts](docs/screenshots/contacts.png)
-![Categories](docs/screenshots/categories.png)
+![Transactions](docs/screenshots/transactions.png?v=20260220b)
+![Accounts](docs/screenshots/accounts.png?v=20260220b)
+![Analytics](docs/screenshots/analytics.png?v=20260220b)
+![Contacts](docs/screenshots/contacts.png?v=20260220b)
+![Categories](docs/screenshots/categories.png?v=20260220b)
 
 ## Tech stack
 
@@ -78,7 +78,7 @@ Reference:
 
 ### 3. Configure local secrets (do not commit)
 Create or update:
-- `/Users/mohitbaweja/Documents/FinancialInsightsApp/backend/FinancialInsights.Api/appsettings.Local.json`
+- `backend/FinancialInsights.Api/appsettings.Local.json`
 
 Example:
 
@@ -175,10 +175,10 @@ Exported columns:
 ## License
 
 This project is source-available and **free for personal use only**.  
-See `/Users/mohitbaweja/Documents/FinancialInsightsApp/LICENSE`.
+See `LICENSE`.
 
 It is not licensed for commercial, hosted/SaaS, or redistribution use without explicit permission.
 
 ## Attribution
 
-- Bank logo attribution: `/Users/mohitbaweja/Documents/FinancialInsightsApp/docs/BANK_LOGO_ATTRIBUTION.md`
+- Bank logo attribution: `docs/BANK_LOGO_ATTRIBUTION.md`
