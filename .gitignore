@@ -1,0 +1,22 @@
+# .NET
+**/bin/
+**/obj/
+
+# Node
+frontend/node_modules/
+frontend/dist/
+
+# Local settings
+backend/FinancialInsights.Api/appsettings.Local.json
+.env
+
+# Test artifacts
+frontend/playwright-report/
+frontend/test-results/
+coverage/
+
+# OS
+.DS_Store
+
+# Local backups
+backups/

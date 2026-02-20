@@ -1,0 +1,12 @@
+[
+  { "key": "anz", "name": "ANZ New Zealand", "logoPath": "/banks/anz.svg" },
+  { "key": "asb", "name": "ASB Bank", "logoPath": "/banks/asb.svg" },
+  { "key": "bnz", "name": "Bank of New Zealand (BNZ)", "logoPath": "/banks/bnz.svg" },
+  { "key": "westpac", "name": "Westpac New Zealand", "logoPath": "/banks/westpac.svg" },
+  { "key": "kiwibank", "name": "Kiwibank", "logoPath": "/banks/kiwibank.svg" },
+  { "key": "tsb", "name": "TSB Bank", "logoPath": "/banks/tsb.svg" },
+  { "key": "cooperative", "name": "The Co-operative Bank", "logoPath": "/banks/cooperative.png" },
+  { "key": "sbs", "name": "SBS Bank", "logoPath": "/banks/sbs.svg" },
+  { "key": "heartland", "name": "Heartland Bank", "logoPath": "/banks/heartland.svg" },
+  { "key": "rabobank", "name": "Rabobank New Zealand", "logoPath": "/banks/rabobank.svg" }
+]
